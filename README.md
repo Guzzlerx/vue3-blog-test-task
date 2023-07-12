@@ -1,4 +1,4 @@
-# todo
+# Blog posts
 
 ## Project setup
 ```
