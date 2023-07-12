@@ -5,6 +5,17 @@
       <p><strong>Описание: </strong>{{ post.body }}</p>
     </div>
     <div class="post__btns">
+      <my-button
+        @click="
+          $router.push({
+            // name: 'post_details',
+            // params: { kek: 'asd' },
+            path: `/posts/${post.id}`,
+            query: post,
+          })
+        "
+        >Открыть</my-button
+      >
       <my-button @click="$emit('removePost', post.id)">Удалить</my-button>
     </div>
   </article>
@@ -33,5 +44,10 @@ export default {
 
 .post__title {
   font-weight: 400;
+}
+.post__btns {
+  display: flex;
+  gap: 5px;
+  margin-left: 10px;
 }
 </style>
