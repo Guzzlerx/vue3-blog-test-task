@@ -1,24 +1,8 @@
-# Blog posts
+<h1 align=center><i>Blog posts</i></h1>
 
-## Project setup
-```
-npm install
-```
+## About: ⚡
+#### _Testing task on Vue3 for a company._
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Stack: :wrench:
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+_Vue3, VueX, Vue Router, Composition API, JavaScript, CSS, HTML, Git._
