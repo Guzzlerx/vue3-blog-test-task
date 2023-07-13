@@ -8,10 +8,7 @@
       <my-button
         @click="
           $router.push({
-            // name: 'post_details',
-            // params: { kek: 'asd' },
             path: `/posts/${post.id}`,
-            query: post,
           })
         "
         >Открыть</my-button

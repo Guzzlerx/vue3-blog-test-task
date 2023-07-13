@@ -4,7 +4,15 @@
       Блог с постами
     </h3>
     <div class="navbar__btns">
-      <my-button @click="$router.push(PATH.POSTS_PAGE)">Блог</my-button>
+      <my-button @click="$router.push(PATH.POSTS_PAGE)"
+        >Блог без VueX</my-button
+      >
+      <my-button @click="$router.push(PATH.STORED_POSTS_PAGE)"
+        >Блог с VueX</my-button
+      >
+      <my-button @click="$router.push(PATH.COMPOSITION_POSTS_PAGE)"
+        >Блог с Composition API</my-button
+      >
       <my-button @click="$router.push(PATH.ABOUT_PAGE)">О сайте</my-button>
     </div>
   </div>

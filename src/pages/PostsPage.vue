@@ -21,8 +21,8 @@
     ></div>
   </div>
 </template>
-  
-  <script>
+
+<script>
 import axios from "axios";
 import SyncLoader from "vue-spinner/src/SyncLoader.vue";
 import PostForm from "@/components/PostForm.vue";
@@ -80,22 +80,24 @@ export default {
       }
     },
     async loadMorePosts() {
-      this.page += 1;
+      if (this.posts.length > 1) {
+        this.page += 1;
 
-      try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/posts",
-          {
-            params: {
-              _page: this.page,
-              _limit: this.limit,
-            },
-          }
-        );
+        try {
+          const response = await axios.get(
+            "https://jsonplaceholder.typicode.com/posts",
+            {
+              params: {
+                _page: this.page,
+                _limit: this.limit,
+              },
+            }
+          );
 
-        this.posts = [...this.posts, ...response.data];
-      } catch (error) {
-        console.error(error);
+          this.posts = [...this.posts, ...response.data];
+        } catch (error) {
+          console.error(error);
+        }
       }
     },
     changePage(pageNumber) {
